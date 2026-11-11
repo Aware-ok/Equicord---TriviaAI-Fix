@@ -245,7 +245,7 @@ export async function getResponse(payload: ApiMessage[]): Promise<string> {
                     },
                     ...payload
                 ],
-                max_tokens: settings.store.maxTokens,
+                max_completion_tokens: settings.store.maxTokens,
             })
         });
 
