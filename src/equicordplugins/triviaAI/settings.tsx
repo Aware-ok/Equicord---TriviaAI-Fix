@@ -50,6 +50,14 @@ export const settings = definePluginSettings({
         description: "Maximum number of tokens in the response.",
         default: 500
     },
+    maxTokenParameter: {
+        type: OptionType.SELECT,
+        description: "Which maximum token parameter should be sent to the AI endpoint.",
+        options: [
+            { label: "max_tokens", value: "max_tokens", default: true },
+            { label: "max_completion_tokens", value: "max_completion_tokens" }
+        ]
+    },
     endpoint: {
         type: OptionType.STRING,
         description: "OpenAI Compatible AI Endpoint.",
